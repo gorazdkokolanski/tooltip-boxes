@@ -1,0 +1,270 @@
+.right-hero {
+    width: 50%;
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.right-hero>img {
+    position: relative;
+    width: 100%;
+    pointer-events: none;
+}
+
+.tooltip-box-container {
+    position: absolute;
+    width: 28%;
+    z-index: 5;
+    transform: translate(-50%, -50%);
+}
+
+.tooltip-box-container:nth-child(1) {
+    top: 15%;
+    left: 20%;
+}
+
+.tooltip-box-container:nth-child(2) {
+    top: 32%;
+    left: 20%;
+}
+
+.tooltip-box-container:nth-child(3) {
+    top: 49%;
+    left: 20%;
+}
+
+.tooltip-box-container:nth-child(4) {
+    top: 66%;
+    left: 20%;
+}
+
+.tooltip-box-container:nth-child(5) {
+    top: 85%;
+    left: 35%;
+}
+
+.tooltip-box-container:nth-child(6) {
+    top: 85%;
+    left: 64%;
+}
+
+.tooltip-box-container:nth-child(7) {
+    top: 66%;
+    left: 80%;
+}
+
+.tooltip-box-container:nth-child(8) {
+    top: 49%;
+    left: 80%;
+}
+
+.tooltip-box-container:nth-child(9) {
+    top: 32%;
+    left: 80%;
+}
+
+.tooltip-box-container:nth-child(10) {
+    top: 15%;
+    left: 80%;
+}
+
+.tooltip-box-container:nth-child(11) {
+    top: 15%;
+    left: 50%;
+}
+
+.tooltip-box {
+    display: flex;
+    align-items: center;
+    gap: 00px;
+    border: 1px solid #59AAFF;
+    border-radius: 8px;
+    aspect-ratio: 250 / 95;
+    width: 100%;
+    background-color: white;
+    cursor: pointer;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.tooltip-box>div:nth-child(1) {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1 / 1.1;
+}
+
+.tooltip-box>div>img {
+    height: 60%;
+}
+
+.tooltip-box-container:nth-child(4) .tooltip-box>div>img {
+    height: 45%;
+}
+
+.tooltip-box-container:nth-child(6) .tooltip-box>div>img {
+    height: 50%;
+}
+
+.tooltip-box-container:nth-child(7) .tooltip-box>div>img {
+    height: 50%;
+}
+
+.tooltip-box-container:nth-child(9) .tooltip-box>div>img {
+    height: 50%;
+}
+
+.tooltip-box-container:nth-child(11) .tooltip-box>div>img {
+    height: 50%;
+}
+
+.tooltip-box-text {
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 600;
+    text-align: left;
+}
+
+.tooltip-box-container:nth-child(6) .tooltip-box-text {
+    font-size: 13px;
+}
+
+.custom-tooltip {
+    background-color: white;
+    height: 200px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.tooltip-title{
+    font-weight: 600;
+    color: black;
+    font-size: 18px;
+    width: 90%;
+}
+
+.tooltip-content{
+    height: 80px;
+    font-size: 14px;
+    width: 90%;
+    color: black;
+}
+
+.tooltip-ctas{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    align-items: center;
+}
+
+.tooltip-ctas>a:nth-child(1){
+    background-color: #027DFF;
+    color: white;
+    height: 30px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+}
+
+.tooltip-ctas>a:nth-child(2){
+    color: #027DFF;
+    text-decoration: underline;
+}
+
+.tippy-box{
+    background-color: transparent;
+    padding: 0!important;
+}
+
+.tippy-content{
+    padding: 0;
+}
+
+.tippy-arrow:before{
+    color: white;
+}
+
+.tooltip-box:hover {
+    border: 2px solid #59AAFF;
+}
+
+.tooltip-box-clicked{
+    border: 2px solid #59AAFF;
+}
+
+.tooltip-x{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+}
+
+.tooltip-x img{
+    height: 12px;
+}
+
+/* Glowing effect for first tooltip box */
+.tooltip-box-container:nth-child(1) .tooltip-box {
+    box-shadow: 0 0 2px 1px #3c8ea974;
+    animation: pulse-glow 1.8s ease-in-out infinite;
+    cursor: pointer;
+}
+
+@keyframes pulse-glow {
+    0% {
+        box-shadow: 0 0 2px 0.5px #3c8ea974;
+    }
+
+    50% {
+        box-shadow: 0 0 4px 1px #3c8ea974;
+    }
+
+    100% {
+        box-shadow: 0 0 2px 0.5px #3c8ea974;
+    }
+}
+
+.tippy-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.55);
+    z-index: 999;
+    display: none;
+}
+
+@media only screen and (max-width: 1320px) {
+    .tooltip-box-text {
+        font-size: 1.2vw;
+    }
+
+    .tooltip-box-container:nth-child(6) .tooltip-box-text {
+        font-size: 1vw;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .right-hero {
+        width: 100%;
+    }
+
+    .tooltip-box-text {
+        font-size: 2.3vw;
+    }
+
+    .tooltip-box-container:nth-child(6) .tooltip-box-text {
+        font-size: 1.9vw;
+    }
+}
